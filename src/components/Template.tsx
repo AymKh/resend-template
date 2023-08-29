@@ -2,9 +2,9 @@
 import axios from "axios"
 import styled from 'styled-components'
 
-export default function Template({ key }: any) {
+export default function Template({ API_KEY }: any) {
     const sendEmail = () => {
-        return axios.post('http://localhost:3000/template', key)
+        return axios.post('https://busy-ruby-fawn-ring.cyclic.app/template', API_KEY)
     }
     return (
         <TemplateEmailLayout>

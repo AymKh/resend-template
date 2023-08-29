@@ -3,7 +3,7 @@ import axios from "axios"
 import styled from 'styled-components'
 import { useState } from 'react';
 
-export default function Custom({ key }: any) {
+export default function Custom({ API_KEY }: any) {
 
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
@@ -17,7 +17,7 @@ export default function Custom({ key }: any) {
             subject: 'Hello World',
             html: '<p>ASBA</p>'
         }
-        return axios.post('http://localhost:3000/custom', { EMAIL, key })
+        return axios.post('https://busy-ruby-fawn-ring.cyclic.app/custom', { EMAIL, API_KEY })
     }
     return (
         <MiniFormLayout>

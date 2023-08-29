@@ -4,16 +4,16 @@ import Custom from './components/Custom';
 import Template from './components/Template';
 
 function App() {
-  const [key, setkey] = useState('');
+  const [API_KEY, setAPI_KEY] = useState('');
 
   return (
     <>
-      <input type="text" placeholder='put in your api key' value={key} onChange={(event) => setkey(event.target.value)} />
+      <input type="text" placeholder='put in your api key' value={API_KEY} onChange={(event) => setAPI_KEY(event.target.value)} />
       <p>⚠️ Please note that your API key will be visible and can be traced in the network calls</p>
       <hr />
-      <Custom key={key} />
+      <Custom API_KEY={API_KEY} />
       <hr />
-      <Template key={key} />
+      <Template API_KEY={API_KEY} />
     </>
   )
 }
